@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Profesional | NutriDog Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #0d47a1; font-family: 'Poppins'; margin: 0; color: white; }
+        .reg-card { background: white; padding: 2.5rem; border-radius: 20px; width: 100%; max-width: 450px; color: #333; }
+        .security-badge { background: #e3f2fd; color: #0d47a1; padding: 10px; border-radius: 8px; font-size: 0.75rem; margin-bottom: 1rem; text-align: center; font-weight: bold; }
+        input { width: 100%; padding: 12px; margin: 8px 0; border: 2px solid #eee; border-radius: 8px; box-sizing: border-box; }
+        .btn-vet { width: 100%; padding: 14px; background: #0d47a1; border: none; border-radius: 10px; color: white; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="reg-card">
+        <div class="security-badge">🔒 REGISTRO DE PERSONAL AUTORIZADO</div>
+        <h2 style="margin-top:0">Alta Médica SGA</h2>
+        <form action="login_vet.html" onsubmit="alert('Solicitud enviada. El administrador de la clínica validará tu perfil.')">
+            <input type="text" placeholder="Nombre y Apellidos" required>
+            <input type="text" placeholder="Número de Colegiado / ID Profesional" required>
+            <input type="text" placeholder="Nombre de la Clínica" required>
+            <input type="email" placeholder="Correo institucional" required>
+            <input type="password" placeholder="Contraseña segura" required>
+            <button type="submit" class="btn-vet">SOLICITAR ACCESO</button>
+        </form>
+        <a href="login_vet.html" style="display:block; text-align:center; margin-top:15px; color:#0d47a1; text-decoration:none; font-size:0.85rem">Volver al login</a>
+    </div>
+</body>
+</html>

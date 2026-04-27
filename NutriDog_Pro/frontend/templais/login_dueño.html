@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Dueño | NutriDog Pro</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos Base Globales */
+        :root {
+            --blue-primary: #1a73e8;
+            --orange-action: #f39c12;
+            --grey-text: #666;
+            --light-bg: #f4f7f6;
+            --shadow-card: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: var(--light-bg);
+            padding: 20px;
+        }
+
+        /* Tarjeta de Login */
+        .login-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-card);
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        /* Efecto de borde superior */
+        .login-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--blue-primary), #42a5f5);
+        }
+
+        /* Encabezado */
+        .card-header .logo-container {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-header h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--blue-primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .card-header p {
+            color: var(--grey-text);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        /* Formulario y Inputs */
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.6rem;
+            font-size: 0.85rem;
+            color: #444;
+            font-weight: 500;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+            font-size: 1.1rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 14px 14px 45px;
+            border: 1.5px solid #eee;
+            border-radius: 10px;
+            background: #fafafa;
+            transition: 0.3s;
+            font-size: 0.95rem;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--blue-primary);
+            background: white;
+            box-shadow: 0 4px 10px rgba(26, 115, 232, 0.1);
+        }
+
+        /* Botón Profesional */
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background: var(--orange-action);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-submit:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(243, 156, 18, 0.2);
+        }
+
+        /* Pie de página con Registro */
+        .form-footer {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: var(--grey-text);
+        }
+
+        .register-box {
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-register-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: 2px solid var(--orange-action);
+            color: var(--orange-action);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-register-link:hover {
+            background: var(--orange-action);
+            color: white;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--blue-primary);
+            font-weight: 500;
+            transition: 0.3s;
+            font-size: 0.85rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <div class="card-header">
+            <div class="logo-container">🐾 <span style="font-weight: 700;">NutriDog <span style="font-weight: 300; font-size: 0.8em; color: var(--grey-text);">Pro</span></span></div>
+            <h2>Acceso al Portal del Dueño</h2>
+            <p>Por favor, ingresa tus credenciales autorizadas.</p>
+        </div>
+
+        <form action="user_owner.html">
+            <div class="form-group">
+                <label for="email">CORREO ELECTRÓNICO</label>
+                <div class="input-wrapper">
+                    <span class="input-icon">👤</span> 
+                    <input type="email" id="email" placeholder="nombre@correo.com" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">CONTRASEÑA</label>
+                <div class="input-wrapper">
+                    <span class="input-icon">🔒</span>
+                    <input type="password" id="password" placeholder="********" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                <span>INGRESO SEGURO</span>
+                <span>➜</span>
+            </button>
+        </form>
+
+        <div class="form-footer">
+            <div class="register-box">
+                <p>¿Aún no tienes cuenta?</p>
+                <a href="registro_dueño.html" class="btn-register-link">REGISTRARME AHORA</a>
+            </div>
+            
+            <a href="login.html" class="back-link">← Cambiar mi perfil de acceso</a>
+        </div>
+    </div>
+
+</body>
+</html>

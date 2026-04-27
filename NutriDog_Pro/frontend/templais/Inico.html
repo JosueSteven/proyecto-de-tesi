@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5"> 
+    <title>NutriDog Pro - Inicio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🐾 NutriDog Pro</div>
+        <nav class="nav-links">
+            <a href="#servicios">Servicios</a>
+            <a href="login.html" class="btn-ingresar">Ingresar</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="content-area">
+            <h1>El bienestar de tu amigo peludo <br><span>es lo primero</span></h1>
+            <p>Cálculos exactos avalados por Inteligencia Artificial para la nutrición de tu mascota.</p>
+            <button class="btn-saber-mas" onclick="abrirModal()">Saber Más</button>
+        </div>
+        <div class="image-area"></div>
+    </section>
+
+    <section id="servicios" class="servicios-section">
+        <h2>Nuestros Servicios Especializados</h2>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <div class="icon-box">🤖</div>
+                <h3>IA Nutricional</h3>
+                <p>Generación de dietas personalizadas basadas en el perfil biométrico único de cada perro.</p>
+            </div>
+            <div class="servicio-card">
+                <div class="icon-box">🏥</div>
+                <h3>Gestión Clínica</h3>
+                <p>Herramientas avanzadas para que veterinarios gestionen historias clínicas con precisión digital.</p>
+            </div>
+            <div class="servicio-card">
+                <div class="icon-box">📈</div>
+                <h3>Seguimiento Vital</h3>
+                <p>Monitoreo constante del progreso físico y nutricional para ajustar las recetas en tiempo real.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="miModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="cerrarModal()">&times;</span>
+            <h2 style="color: #1a73e8; margin-bottom: 15px;">Sobre NutriDog Pro</h2>
+            <p style="line-height: 1.6; color: #333;">
+                <strong>NutriDog Pro</strong> es una plataforma avanzada que utiliza Inteligencia Artificial para optimizar la salud canina. 
+                <br><br>
+                Analizamos variables clínicas y nutricionales para ofrecer soluciones precisas tanto a dueños de mascotas como a profesionales veterinarios, garantizando una vida más larga y saludable para cada perro.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function abrirModal() {
+            document.getElementById("miModal").style.display = "block";
+        }
+        function cerrarModal() {
+            document.getElementById("miModal").style.display = "none";
+        }
+        // Cerrar si se hace clic fuera del cuadro blanco
+        window.onclick = function(event) {
+            let modal = document.getElementById("miModal");
+            if (event.target == modal) { modal.style.display = "none"; }
+        }
+    </script>
+</body>
+</html>

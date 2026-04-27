@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriDog Pro - Panel Dueño</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/user_owmer.css">
+</head>
+<body class="dashboard-body">
+
+    <nav class="sidebar">
+        <div class="sidebar-logo">🐾 NutriDog Pro</div>
+        <ul class="nav-menu">
+            <li><a href="#" class="active" onclick="mostrarSeccion('dashboard')">🏠 Dashboard</a></li>
+            <li><a href="#" onclick="mostrarSeccion('receta')">🥗 Mi Receta IA</a></li>
+            <li><a href="#" onclick="mostrarSeccion('progreso')">📈 Progreso</a></li>
+            <li><a href="#" onclick="mostrarSeccion('configuracion')">⚙️ Ajustes</a></li>
+            <li><a href="Inico.html" class="btn-salir">🚪 Salir</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <div id="seccion-dashboard" class="content-section active">
+            <header class="content-header" style="display: flex; align-items: center; gap: 20px;">
+                <div class="pet-avatar-container" onclick="document.getElementById('pet-photo-input').click()">
+                    <img id="pet-photo-preview" src="https://via.placeholder.com/100?text=Subir+Foto" alt="Mascota">
+                    <div class="avatar-overlay">📸</div>
+                </div>
+                <input type="file" id="pet-photo-input" hidden accept="image/*" onchange="cambiarFoto(this)">
+                
+                <div>
+                    <h1>¡Hola, <span id="nombre-usuario">Usuario</span>! 🐕‍🦺</h1>
+                    <p>Gestiona la salud y nutrición inteligente de tu mascota.</p>
+                </div>
+            </header>
+
+            <div class="card recommendation-card" id="clima-alerta">
+                <div class="rec-icon">💡</div>
+                <div class="rec-content">
+                    <h4 id="rec-titulo">Tip de Innovación NutriDog</h4>
+                    <p id="rec-mensaje">Cargando recomendación del día...</p>
+                </div>
+            </div>
+
+            <section class="dashboard-grid">
+                <div class="card status-card">
+                    <h3>Estado Nutricional</h3>
+                    <div class="status-indicator">En Monitoreo</div>
+                    <p>Completa los datos para que la IA genere la receta.</p>
+                </div>
+
+                <div class="card form-card">
+                    <h3>Actualizar Datos de Salud</h3>
+                    <form class="health-form">
+                        <div class="form-group"><label>Peso Actual (kg)</label><input type="number" placeholder="Ej: 15.4" step="0.1" required></div>
+                        <div class="form-group"><label>Edad (Años)</label><input type="number" placeholder="Ej: 4" required></div>
+                        <div class="form-group"><label>Raza</label><input type="text" placeholder="Ej: Golden Retriever" required></div>
+                        <div class="form-group"><label>Nivel de Actividad</label>
+                            <select>
+                                <option>Bajo (Sedentario)</option>
+                                <option selected>Medio (Paseos diarios)</option>
+                                <option>Alto (Atleta/Trabajo)</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width"><label>Condiciones Médicas o Alergias</label><textarea placeholder="Indica si tiene problemas renales, alergia al pollo, etc."></textarea></div>
+                        <button type="button" class="btn-consultar">Consultar a la IA 🤖</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <div id="seccion-receta" class="content-section" style="display:none;">
+            <header class="content-header"><h1>🥗 Mi Receta IA</h1></header>
+            <div class="card"><p>Presiona "Consultar a la IA" para generar tu dieta.</p></div>
+        </div>
+
+        <div id="seccion-progreso" class="content-section" style="display:none;">
+            <header class="content-header"><h1>📈 Progreso</h1></header>
+            <div class="card"><p>Aquí verás las gráficas de evolución de tu mascota.</p></div>
+        </div>
+
+        <div id="seccion-configuracion" class="content-section" style="display:none;">
+            <header class="content-header"><h1>⚙️ Ajustes del Perfil</h1></header>
+            <div class="card">
+                <p>Cambia tus datos de contacto o la contraseña de acceso.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Función para cambiar entre pestañas
+        function mostrarSeccion(seccionId) {
+            document.querySelectorAll('.content-section').forEach(s => s.style.display = 'none');
+            document.querySelectorAll('.nav-menu a').forEach(a => a.classList.remove('active'));
+            document.getElementById('seccion-' + seccionId).style.display = 'block';
+            event.currentTarget.classList.add('active');
+        }
+
+        // Lógica para previsualizar la foto del perro
+        function cambiarFoto(input) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = (e) => document.getElementById('pet-photo-preview').src = e.target.result;
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        // Recomendación automática de clima
+        window.addEventListener('load', () => {
+            const card = document.getElementById('clima-alerta');
+            document.getElementById('rec-titulo').innerText = "⚠️ Alerta de Calor";
+            document.getElementById('rec-mensaje').innerText = "Hoy hace mucho calor en tu ciudad, asegúrate de que tu mascota tome 200ml extra de agua fresca junto a su receta IA.";
+            card.style.borderLeft = "8px solid #e74c3c";
+            card.style.background = "#fdf2f2";
+            
+            // Ejemplo: Cambiar nombre dinámicamente (puedes cambiarlo aquí)
+            document.getElementById('nombre-usuario').innerText = "Juan Pérez"; 
+        });
+    </script>
+</body>
+</html>

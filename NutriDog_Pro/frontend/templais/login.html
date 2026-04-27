@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTRIDOG_PRO AI - Conectar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/login.css">
+    <style>
+        /* Estilos para el nuevo botón de inicio */
+        .btn-inicio-home {
+            margin-top: 2rem;
+            padding: 10px 25px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1.5px solid white;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-inicio-home:hover {
+            background-color: white;
+            color: #1a73e8; /* Ajusta este color al azul de tu diseño */
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-master-container">
+        <div class="welcome-section">
+            <div class="logo-icon" style="font-size: 4rem; margin-bottom: 1rem;">🐾</div>
+            <h1>NUTRIDOG_PRO</h1>
+            <p>Sistema Inteligente de Gestión Clínica y Nutricional Canina.</p>
+            
+            <a href="Inico.html" class="btn-inicio-home">Página de Inicio</a>
+        </div>
+
+        <div class="profile-selection-section">
+            <div class="sga-header">
+                <h2>CONECTAR</h2>
+                <span>Selecciona tu perfil para acceder al sistema</span>
+            </div>
+            <div class="profiles-grid">
+                <div class="profile-card user">
+                    <h3>Dueño de Mascota</h3>
+                    <p>Accede al perfil de tu perrito, consulta su receta IA y registra su progreso.</p>
+                    <button class="btn-ingresar" onclick="redirigir('user')">Ingresar</button>
+                </div>
+                <div class="profile-card vet">
+                    <h3>Veterinario</h3>
+                    <p>Área de Administración: Gestión de pacientes, validación clínica y alertas.</p>
+                    <button class="btn-ingresar" onclick="redirigir('vet')">Ingresar</button>
+                </div>
+            </div>
+            <div class="login-footer">
+                &copy; 2026 - Facultad de Ingeniería - Ingeniería de Software
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirigir(rol) {
+            if (rol === 'user') {
+                window.location.href = 'login_dueño.html'; 
+            } else if (rol === 'vet') {
+                window.location.href = 'login_vet.html';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGA Veterinario | NutriDog Pro</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fa-solid fa-house-chimney-medical"></i>
+                <span>NutriDog <b>Pro</b></span>
+            </div>
+            <nav class="menu">
+                <a href="#" class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="#"><i class="fa-solid fa-dog"></i> Gestión de Pacientes</a>
+                <a href="#"><i class="fa-solid fa-file-medical"></i> Validar Recetas IA</a>
+                <a href="#"><i class="fa-solid fa-bell"></i> Alertas Clínicas</a>
+                <a href="#"><i class="fa-solid fa-gear"></i> Configuración</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="login_vet.html"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <h1>Panel de Gestión Administrativa y Clínica</h1>
+                <div class="user-info">
+                    <span>Dr. Veterinario</span>
+                    <img src="https://via.placeholder.com/40" alt="Avatar">
+                </div>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <i class="fa-solid fa-paw"></i>
+                    <div>
+                        <h3>124</h3>
+                        <p>Pacientes Activos</p>
+                    </div>
+                </div>
+                <div class="stat-card warning">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <div>
+                        <h3>8</h3>
+                        <p>Alertas Nutricionales</p>
+                    </div>
+                </div>
+                <div class="stat-card blue">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <div>
+                        <h3>45</h3>
+                        <p>Recetas IA Pendientes</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="table-container">
+                <h2>Pacientes Recientes y Estado Nutricional</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mascota</th>
+                            <th>Dueño</th>
+                            <th>Objetivo</th>
+                            <th>Estado IA</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Max (Golden)</td>
+                            <td>Carlos Pérez</td>
+                            <td>Bajar de Peso</td>
+                            <td><span class="badge success">Validado</span></td>
+                            <td><button class="btn-action">Ver Expediente</button></td>
+                        </tr>
+                        <tr>
+                            <td>Luna (Pug)</td>
+                            <td>María López</td>
+                            <td>Mantener Peso</td>
+                            <td><span class="badge pending">Por Validar</span></td>
+                            <td><button class="btn-action">Ver Expediente</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

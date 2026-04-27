@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a; /* Fondo oscuro profesional */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.vet-container {
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #334155;
+    color: white;
+    text-align: center;
+}
+
+.icon-header { font-size: 3rem; margin-bottom: 10px; }
+
+h1 { font-size: 1.5rem; margin-bottom: 5px; color: #38bdf8; }
+
+p { color: #94a3b8; font-size: 0.9rem; margin-bottom: 25px; }
+
+.input-group { text-align: left; margin-bottom: 15px; }
+
+label { display: block; margin-bottom: 5px; font-size: 0.85rem; color: #cbd5e1; }
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #475569;
+    background: #0f172a;
+    color: white;
+    box-sizing: border-box;
+}
+
+.btn-vet {
+    width: 100%;
+    padding: 14px;
+    background: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-vet:hover { background: #0369a1; }
+
+.back-link { display: block; margin-top: 20px; color: #94a3b8; text-decoration: none; font-size: 0.8rem; }

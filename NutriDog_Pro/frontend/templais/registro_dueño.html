@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Cuenta | NutriDog Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --orange: #f39c12; --blue: #1a73e8; }
+        body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #f4f7f6; font-family: 'Poppins'; margin: 0; }
+        .reg-card { background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 450px; }
+        h2 { color: var(--blue); text-align: center; margin-bottom: 1.5rem; }
+        input { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
+        .btn-reg { width: 100%; padding: 14px; background: var(--orange); border: none; border-radius: 10px; color: white; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        .back { display: block; text-align: center; margin-top: 15px; color: var(--blue); text-decoration: none; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="reg-card">
+        <h2>Crear Cuenta de Dueño</h2>
+        <form action="login_dueño.html" onsubmit="alert('¡Cuenta creada con éxito! Ahora puedes iniciar sesión.')">
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="password" placeholder="Crea una contraseña" required>
+            <input type="password" placeholder="Confirma tu contraseña" required>
+            <button type="submit" class="btn-reg">REGISTRARME</button>
+        </form>
+        <a href="login_dueño.html" class="back">¿Ya tienes cuenta? Inicia sesión</a>
+    </div>
+</body>
+</html>
